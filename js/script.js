@@ -1,19 +1,19 @@
 $(function () {
 	var elWrap = $('#slider'),
-		el =  elWrap.find('p'),
+		el =  elWrap.find('span'),
 		indexP = 1,
 		indexMax = el.length,
 		phase = 3000;
 	
 	function change () {
 		el.fadeOut(500);
-		el.filter(':nth-child('+indexP+')').fadeIn(500);
+		el.filter(':nth-child('+indexSpan+')').fadeIn(500);
 	}	
 		
 	function autoCange () {	
-		indexP++;
-		if(indexP > indexMax) {
-			indexP = 1;
+		indexSpan++;
+		if(indexSpan > indexMax) {
+			indexSpan = 1;
 		}			
 		change ();
 	}	
@@ -31,16 +31,16 @@ $(function () {
 		btnPrev = $('span.prev');
 		
 	btnNext.click(function() {
-		indexP++;
-		if(indexP > indexMax) {
-			indexP = 1;
+		indexSpan++;
+		if(indexSpan > indexMax) {
+			indexSpan = 1;
 		}
 		change ();
 	});
 	btnPrev.click(function() {
-		indexP--;
-		if(indexP < 1) {
-			indexP = indexMax;
+		indexSpan--;
+		if(indexSpan < 1) {
+			indexSpan = indexMax;
 		}
 		change ();
 	});	
