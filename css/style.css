@@ -177,7 +177,6 @@ div.about {
 	border: 1px solid #91778e !important;
 	color: #fff !important;
 }
-
 .work-bg {
 	background-image: url(../img/bg/green-bg.png);
 	height: 1000px;
@@ -199,7 +198,6 @@ div.work {
 	border: 1px solid #a1ca6c!important;
 	color: #fff !important;
 }
-
 .contacts-bg {
 	background-image: url(../img/bg/aqua-bg.png);
 	height: 1000px;
@@ -221,12 +219,10 @@ div.contacts {
 	border: 1px solid #82c8bd !important;
 	color: #ffffff !important;
 }
-
-
 .servises h1 {
 	font-family: "Lato-Light";
 }
-.servises .lobortis p{
+.servises .lobortis p {
 	text-transform: uppercase;
 	font-family: "Lato-Regular";
 	font-size: 20px;
@@ -257,11 +253,7 @@ div.contacts {
 .content-block:nth-child(2), .content-block:nth-child(3), .content-block:nth-child(4) {
 	margin-left: 20px;
 }
-
-
-
-
-.about .col-xs-2   {
+.about .col-xs-2 {
 	background-image: url(../img/pict/man.png);
 	background-repeat: no-repeat;
 	background-position: center 0;
@@ -280,6 +272,11 @@ div.contacts {
 	text-transform: uppercase;
 	font-family: "Lato-Light";
 	font-size: 60px;
+}
+.about p {
+	font-family: "Lato-Regular";
+	color: #e5d1e3;
+	font-size: 14px;
 }
 .about .col-xs-2:hover {
 	background-image: url(../img/pict/man-hover.png);
@@ -337,26 +334,7 @@ div.contacts {
 	background-image: url(../img/pict/social-hover.png);
 	background-position: 30px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*зелененький флажок*/
-
 a.tooltips {
 	position: relative;
   display: inline;
@@ -365,7 +343,7 @@ a.tooltips {
 }
 a.tooltips span {
   position: absolute;
-  width:274px;
+  width: 274px;
   color: #FFFFFF;
   background: #A1CA6C;
   height: 50px;
@@ -380,16 +358,30 @@ a.tooltips span:after {
   top: 100%;
   left: 50%;
   margin-left: -8px;
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-top: 8px solid #A1CA6C;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
 a.tooltips span {
   visibility: visible;
-  
-  top:60px;
+  top: 60px;
   left: 50%;
   margin-left: -107px;
- 
+}
+.work h1 {
+	text-transform: uppercase;
+	font-family: "Lato-Light";
+	font-size: 60px;
+}
+.work p {
+	font-family: "Lato-Regular";
+	color: #fff;
+	font-size: 14px;
+}
+.work .nav-tabs li a:hover, .work .nav-tabs li a:focus, .work .nav-tabs li a:active {
+	background-color: #f5c149 !important;
+	border: 1px solid #f5c149!important;
+	color: #fff !important;
 }
