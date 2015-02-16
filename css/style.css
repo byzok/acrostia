@@ -266,6 +266,7 @@ div.contacts {
 	background-repeat: no-repeat;
 	background-position: center 0;
 	color: #a1ca6c;
+	margin-top: 150px;
 }
 .about .col-xs-2 h3 {
 	text-transform: uppercase;
@@ -274,7 +275,11 @@ div.contacts {
 	padding-top: 30px;
 	font-family: "Lato-Black";
 	font-size: 23px;
-	
+}
+.about h1 {
+	text-transform: uppercase;
+	font-family: "Lato-Light";
+	font-size: 60px;
 }
 .about .col-xs-2:hover {
 	background-image: url(../img/pict/man-hover.png);
@@ -353,12 +358,14 @@ div.contacts {
 /*зелененький флажок*/
 
 a.tooltips {
-  position: relative;
+	position: relative;
   display: inline;
+  text-transform: uppercase;
+  font-family: "Lato-Black";
 }
 a.tooltips span {
   position: absolute;
-  width:140px;
+  width:274px;
   color: #FFFFFF;
   background: #A1CA6C;
   height: 50px;
@@ -380,9 +387,9 @@ a.tooltips span:after {
 }
 a.tooltips span {
   visibility: visible;
-  opacity: 0.8;
-  bottom: 30px;
+  
+  top:60px;
   left: 50%;
-  margin-left: -76px;
-  z-index: 999;
+  margin-left: -107px;
+ 
 }
