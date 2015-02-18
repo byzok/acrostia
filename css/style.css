@@ -39,6 +39,15 @@
 	font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Lato-Bold";
+   src: url("fonts/Lato-Bold.otf") format("opentype");
+   src: url("fonts/Lato-Bold.woff") format("woff"),
+		    url("fonts/Lato-Bold.ttf") format("truetype"),
+		    url("fonts/Lato-Bold.svg") format("svg");
+	font-weight: normal;
+  font-style: normal;
+}
 body {
 	max-width: 1600px;
 	margin: 0 auto !important;
@@ -374,14 +383,47 @@ a.tooltips span {
 	text-transform: uppercase;
 	font-family: "Lato-Light";
 	font-size: 60px;
+	margin-top: 33px;
 }
 .work p {
+	margin-top: 58px;
 	font-family: "Lato-Regular";
 	color: #fff;
 	font-size: 14px;
 }
-.work .nav-tabs li a:hover, .work .nav-tabs li a:focus, .work .nav-tabs li a:active {
+.galary li a:hover, .galary li a:focus, .galary li a:active{
 	background-color: #f5c149 !important;
 	border: 1px solid #f5c149!important;
 	color: #fff !important;
+}
+.galary li a {
+	color: #fff;
+	font-family: "Lato-Bold";
+	font-size: 16px;
+	line-height: 24px;
+}
+.work h3 {
+	font-family: "Lato-Bold";
+	font-size: 20px;
+	left: 24px;
+	color: #fff;
+	padding-left: 18px;
+}
+.work .portfolio-menu {
+	border-top: 1px solid #94b963;
+	border-bottom: 1px solid #94b963;
+}
+.work img {
+	max-height: 200px;
+	background-position:center;
+}
+#item2 .row, #item1 .row {
+	margin-bottom: 20px;
+}
+#item2 .row:first-child, #item1 .row:first-child {
+	margin-top: 40px;
+}
+.ror:hover {
+	background-image: url(../img/pict/portfolio-hover-share.png);
+	z-index: 1;
 }
