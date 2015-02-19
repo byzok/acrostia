@@ -500,7 +500,26 @@ footer {
 	height: 150px; 
 }
 .footer-link a {
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: inline-block; 
+	margin-top: 40px;
+}
+.footer-link a.fb {
 	background-image: url(../img/pict/social-pict.png);
-	width: 50px;max-height: 50px;
-	background-position: 0 10px;
+	background-position: 0 0;	
+}
+.footer-link a.tw {
+	background-image: url(../img/pict/social-pict.png);
+	background-position: -100px 0;
+}
+.footer-link a.google {
+	background-image: url(../img/pict/social-pict.png);
+	background-position: 160px 0;	
+}
+.footer-link a.li {
+	background-image: url(../img/pict/social-pict.png);
+	background-position: 60px 0;
 }
