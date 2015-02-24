@@ -1,47 +1,26 @@
-$(function () {
-	var elWrap = $('#slider'),
-		el =  elWrap.find('span'),
-		indexP = 1,
-		indexMax = el.length,
-		phase = 3000;
-	
-	function change () {
-		el.fadeOut(500);
-		el.filter(':nth-child('+indexSpan+')').fadeIn(500);
-	}	
-		
-	function autoCange () {	
-		indexSpan++;
-		if(indexSpan > indexMax) {
-			indexSpan = 1;
-		}			
-		change ();
-	}	
-	var interval = setInterval(autoCange, phase);
 
-	elWrap.mouseover(function() {
-		clearInterval(interval);
-	});
-	elWrap.mouseout(function() {
-		interval = setInterval(autoCange, phase);
-	});
-	
-	elWrap.append('<span class="next"></span><span class="prev"></span>');
-	var	btnNext = $('span.next'),
-		btnPrev = $('span.prev');
-		
-	btnNext.click(function() {
-		indexSpan++;
-		if(indexSpan > indexMax) {
-			indexSpan = 1;
-		}
-		change ();
-	});
-	btnPrev.click(function() {
-		indexSpan--;
-		if(indexSpan < 1) {
-			indexSpan = indexMax;
-		}
-		change ();
-	});	
+$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+  var obj = $(this);
+  $(obj).append("<div class='nav'></div>");
+  $(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
+  });
+  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+ });
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
 });
