@@ -367,7 +367,6 @@ div.contacts {
   background-image: url(../img/pict/social-hover.png);
   background-position: 30px 0;
 }
-/*зелененький флажок*/
 a.tooltips {
   position: relative;
   display: inline;
@@ -547,10 +546,6 @@ footer {
   background-image: url(../img/pict/social-pict.png);
   background-position: 60px 0;
 }
-/*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
   top: 0;
@@ -600,11 +595,6 @@ footer {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
 }
-/* 
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
 #cboxOverlay {
   background: #fff;
   opacity: 0.9;
@@ -639,7 +629,6 @@ footer {
       right: 205px;
       text-indent: -9999px;
     }
-    /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
     #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
       border: 0;
       padding: 0;
@@ -652,8 +641,7 @@ footer {
       top: -20px;
       background: url(../img/pict/controls.png) no-repeat 0 0;
     }
-    /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-    #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active { outline: 0; }
+   #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active { outline: 0; }
     #cboxPrevious {
       background-position: 0px 0px;
       right: 44px;
