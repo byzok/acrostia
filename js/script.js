@@ -1,26 +1,26 @@
 
 $(document).ready(function() {
- $(".slider").each(function () { // обрабатываем каждый слайдер
+ $(".slider").each(function () { 
   var obj = $(this);
   $(obj).append("<div class='nav'></div>");
   $(obj).find("li").each(function () {
    $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
    $(this).addClass("slider"+$(this).index());
   });
-  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+  $(obj).find("span").first().addClass("on"); 
  });
 });
-function sliderJS (obj, sl) { // slider function
- var ul = $(sl).find("ul"); // находим блок
- var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
- var step = $(bl).width(); // ширина объекта
- $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+function sliderJS (obj, sl) {
+ var ul = $(sl).find("ul");
+ var bl = $(sl).find("li.slider"+obj); 
+ var step = $(bl).width(); 
+ $(ul).animate({marginLeft: "-"+step*obj}, 400); // 500 это скорость перемотки
 }
-$(document).on("click", ".slider .nav span", function() { // slider click navigate
- var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
- $(sl).find("span").removeClass("on"); // убираем активный элемент
- $(this).addClass("on"); // делаем активным текущий
- var obj = $(this).attr("rel"); // узнаем его номер
- sliderJS(obj, sl); // слайдим
+$(document).on("click", ".slider .nav span", function() { 
+ var sl = $(this).closest(".slider"); 
+ $(sl).find("span").removeClass("on");
+ $(this).addClass("on"); 
+ var obj = $(this).attr("rel");
+ sliderJS(obj, sl); 
  return false;
 });
