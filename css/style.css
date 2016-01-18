@@ -8,6 +8,10 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 div.home {
   color: #fff;
   width: 100%;
@@ -293,7 +297,7 @@ a.tooltips {
   font-family: "Lato-Black";
 }
 a.tooltips span {
-  position: absolute;
+  position: relative;
   width: 274px;
   color: #FFFFFF;
   background: #A1CA6C;
@@ -306,7 +310,7 @@ a.tooltips span {
 a.tooltips span:after {
   content: '';
   position: absolute;
-  top: 100%;
+  top: 95%;
   left: 50%;
   margin-left: -8px;
   width: 0;
@@ -318,8 +322,8 @@ a.tooltips span:after {
 a.tooltips span {
   visibility: visible;
   top: 60px;
-  left: 50%;
-  margin-left: -107px;
+  left: 0;
+  padding: 15px 20px;
 }
 .work h1 {
   text-transform: uppercase;
